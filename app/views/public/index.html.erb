@@ -1,0 +1,20 @@
+<% content_for :title do %>
+  <% unless @stories.empty? %>
+    <%= "(#{@stories.count})" %>
+  <% end %>
+<% end %>
+
+<h1>THE ART PAGES</h1>
+
+<div class="stories">
+  <% @stories.each do |story| %>
+    <div class="story">
+      <img src="<%= story.first_image %>">
+      <div class="plaque">
+        <h3><%= story.source %></h3>
+        <p><%= story.headline %></p>
+        <div class="date"><%= story.pretty_date %></div>
+      </div>
+    </div>
+  <% end %>
+</div>

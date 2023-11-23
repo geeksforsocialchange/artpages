@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     get "/debug", to: "debug#index"
   end
 
+  get '/public', to: "public#index"
+
   resource :profile, only: [:edit, :update]
   resource :password, only: [:update]
 

@@ -32,6 +32,12 @@ class Story < ApplicationRecord
     super(methods: [:headline, :lead, :source, :pretty_date])
   end
 
+  def first_image
+    doc = Nokogiri::HTML(body)
+    # SURELY there's a better way than this
+    doc.xpath('//img')[0].attribute_nodes.select{ |n| n.name == 'src' }[0].value
+  end
+
   def as_fever_json
     {
       id:,

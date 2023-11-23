@@ -1,0 +1,42 @@
+html {
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  background-image: url('white_wall.png')
+}
+
+h1 {
+  text-align: center;
+}
+
+.stories {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 3rem;
+}
+
+.story img {
+  border: 5px double grey;
+  display: block;
+  width: 100%;
+}
+
+.plaque {
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
+  background-color: white;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 60%;
+  font-size: 70%;
+}
+
+.plaque h3 {
+  margin-top: 0.5rem;
+}
